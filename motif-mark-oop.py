@@ -8,8 +8,8 @@ import numpy as np
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-ff", help="fasta filename")
-parser.add_argument("-mf", help="motif filename")
+parser.add_argument("-f", help="fasta filename")
+parser.add_argument("-m", help="motif filename")
 
 args = parser.parse_args()
 
@@ -42,7 +42,7 @@ class Artist:
         di[header] = (seqlen, exonloc, motiflocs)
         '''
         ## Data ##
-        self.name = args.ff
+        self.name = args.f        
         self.di = di
         self.start = 0
     ## Methods ##
@@ -217,7 +217,7 @@ class Parser:
     return hdr_seq_di
 
 #Parsing motif file and fasta file 
-parsing = Parser(args.mf, args.ff)
+parsing = Parser(args.m, args.f)
 
 #Initializing Motif Objects with Regex string of Motif as value and Motifs as key
 di_motifs = parsing.parse_mfile()
