@@ -111,7 +111,7 @@ class Artist:
             ctx.move_to(10, (50+ i * 70))
             ctx.show_text(hdr)
 
-        surface.write_to_png(f"{self.name}_helpooptest.png")  # Output to PNG
+        surface.write_to_png(f"{self.name}.png")  # Output to PNG
 
 class Sequence:
     def __init__(self, seqstring, header):
