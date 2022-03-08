@@ -55,7 +55,6 @@ class Artist:
         for hdr in self.di:
             dim_info.append(self.di[hdr][0])
         WIDTH = max(dim_info) + 200
-        print(WIDTH)
         HEIGHT = len(self.di) * 80
 
         #establish canvas
