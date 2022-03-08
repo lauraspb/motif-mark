@@ -42,7 +42,7 @@ class Artist:
         di[header] = (seqlen, exonloc, motiflocs)
         '''
         ## Data ##
-        self.name = args.f        
+        self.name = args.f.split('.')[0]        
         self.di = di
         self.start = 0
     ## Methods ##
